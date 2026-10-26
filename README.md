@@ -1,4 +1,4 @@
-# Full-Stack Portfolio & Blog Application (Capstone Project)
+、# Full-Stack Portfolio & Blog Application (Capstone Project)
 
 **Course:** Web Data Management and Application  
 **Total Marks:** 100
@@ -9,9 +9,8 @@
 
 ## Project Structure
 
-```
 CapstoneProject/
-├── backend/                 # Node.js + Express + MongoDB API
+├── backend/
 │   ├── models/
 │   ├── controllers/
 │   ├── routes/
@@ -19,7 +18,7 @@ CapstoneProject/
 │   ├── utils/
 │   ├── server.js
 │   └── package.json
-├── frontend/                # React SPA
+├── frontend/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
@@ -27,7 +26,6 @@ CapstoneProject/
 │   │   └── services/
 │   └── package.json
 └── README.md
-```
 
 ## Features Implemented
 
@@ -54,61 +52,54 @@ CapstoneProject/
 
 ## API Endpoints
 
-| Method | Endpoint                        | Access     | Description                |
-|--------|---------------------------------|------------|----------------------------|
-| POST   | /api/users/register             | Public     | Register user              |
-| POST   | /api/users/login                | Public     | Login & get JWT            |
-| GET    | /api/users/profile              | Private    | Get current user           |
-| GET    | /api/projects                   | Public     | List all projects          |
-| GET    | /api/projects/:id               | Public     | Get single project         |
-| POST   | /api/projects                   | Private    | Create project             |
-| PUT    | /api/projects/:id               | Private    | Update project             |
-| DELETE | /api/projects/:id               | Private    | Delete project             |
-| GET    | /api/blog                       | Public     | List all posts             |
-| GET    | /api/blog/:id                   | Public     | Get post + comments        |
-| POST   | /api/blog                       | Private    | Create post                |
-| PUT    | /api/blog/:id                   | Private+Author | Update post           |
-| DELETE | /api/blog/:id                   | Private+Author | Delete post           |
-| GET    | /api/blog/:postId/comments      | Public     | Get comments               |
-| POST   | /api/blog/:postId/comments      | Private    | Create comment             |
-| POST   | /api/contact                    | Public     | Send contact message       |
-| GET    | /api/contact                    | Private    | Get all messages           |
+| Method | Endpoint | Access | Description |
+|--------|----------|--------|-------------|
+| POST | /api/users/register | Public | Register user |
+| POST | /api/users/login | Public | Login & get JWT |
+| GET | /api/users/profile | Private | Get current user |
+| GET | /api/projects | Public | List all projects |
+| GET | /api/projects/:id | Public | Get single project |
+| POST | /api/projects | Private | Create project |
+| PUT | /api/projects/:id | Private | Update project |
+| DELETE | /api/projects/:id | Private | Delete project |
+| GET | /api/blog | Public | List all posts |
+| GET | /api/blog/:id | Public | Get post + comments |
+| POST | /api/blog | Private | Create post |
+| PUT | /api/blog/:id | Private+Author | Update post |
+| DELETE | /api/blog/:id | Private+Author | Delete post |
+| GET | /api/blog/:postId/comments | Public | Get comments |
+| POST | /api/blog/:postId/comments | Private | Create comment |
+| POST | /api/contact | Public | Send contact message |
+| GET | /api/contact | Private | Get all messages |
 
 ## How to Run Locally
 
 ### 1. Backend
-```bash
 cd backend
 npm install
-# Edit .env with your MongoDB Atlas URI and JWT_SECRET
-npm start
-# Server runs on http://localhost:5000
-```
+node server.js
+（运行在 http://localhost:5000）
 
 ### 2. Frontend
-```bash
 cd frontend
 npm install
-# Optional: create .env with REACT_APP_API_URL=http://localhost:5000/api
 npm start
-# App runs on http://localhost:3000
-```
+（运行在 http://localhost:3000）
 
 ## Deployment Notes
 
-### Backend (Render recommended)
-1. Push backend folder to GitHub
-2. Create new Web Service on Render
-3. Set environment variables: MONGO_URI, JWT_SECRET, NODE_ENV=production
-4. Start command: `node server.js`
+### Backend (Render)
+1. Push code to GitHub
+2. Create Web Service on Render, Root Directory = backend
+3. Add environment variables: MONGO_URI, JWT_SECRET, NODE_ENV=production
+4. Start Command: node server.js
 
-### Frontend (Vercel recommended)
-1. Push frontend folder to GitHub
-2. Import to Vercel
-3. Set environment variable: REACT_APP_API_URL=https://your-backend-url/api
+### Frontend (Vercel)
+1. Push code to GitHub
+2. Import project on Vercel, Root Directory = frontend
+3. Add environment variable: REACT_APP_API_URL=https://你的后端地址/api
 4. Deploy
 
 ## Student Info
-- Student ID: (填写你的学号)
-- Student Name: (填写你的姓名)
-
+- Student ID: 24998100
+- Student Name: 刘梓晨
